@@ -1,3 +1,6 @@
+import asyncio
+import random
+
 from aiokafka import AIOKafkaConsumer, AIOKafkaProducer
 
 from cmd import config
@@ -18,5 +21,6 @@ async def consume():
     try:
         async for msg in consumer:
             print(f'Consumer msg: {msg}')
+            await asyncio.sleep(random.uniform(0.1, 1.5))
     finally:
         await consumer.stop()
