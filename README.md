@@ -12,3 +12,5 @@ service run command<br>
 
 test<br>
 `python tests/stress_test.py`
+
+[Kafka Article](https://www.lemoncode21.com/Blog/simple-kafka-consumer-and-producer-using-fastapi)
